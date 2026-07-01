@@ -1,0 +1,49 @@
+Canterbury dairy grass (NZ) - perennial ryegrass pasture, synthetic example
+      7.2       : AquaCrop Version (August 2024)
+      2         : Year number of cultivation (Non-seeding/planting year)
+  44012         : First day of simulation period - 1 July 2021
+  44376         : Last day of simulation period - 30 June 2022
+  44012         : First day of cropping period - 1 July 2021
+  44376         : Last day of cropping period - 30 June 2022
+-- 1. Climate (CLI) file
+   CanterburySynthetic.CLI
+   './DATA/'
+   1.1 Temperature (Tnx or TMP) file
+   CanterburySynthetic.Tnx
+   './DATA/'
+   1.2 Reference ET (ETo) file
+   CanterburySynthetic.ETo
+   './DATA/'
+   1.3 Rain (PLU) file
+   CanterburySynthetic.PLU
+   './DATA/'
+   1.4 Atmospheric CO2 concentration (CO2) file
+   MaunaLoa.CO2
+   './SIMUL/'
+-- 2. Calendar (CAL) file
+   01Jul.CAL
+   './DATA/'
+-- 3. Crop (CRO) file
+   CanterburyRyegrass.CRO
+   './DATA/'
+-- 4. Irrigation management (IRR) file
+   CanterburyPivot.IRR
+   './DATA/'
+-- 5. Field management (MAN) file
+   CanterburyDairyGrass.MAN
+   './DATA/'
+-- 6. Soil profile (SOL) file
+   CanterburySiltLoam.SOL
+   './DATA/'
+-- 7. Groundwater table (GWT) file
+   (None)
+   (None)
+-- 8. Initial conditions (SW0) file
+   (None)
+   (None)
+-- 9. Off-season conditions (OFF) file
+   (None)
+   (None)
+-- 10. Field data (OBS) file
+   (None)
+   (None)

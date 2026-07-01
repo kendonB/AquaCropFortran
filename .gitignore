@@ -8,3 +8,13 @@ __pycache__
 tests/tmp*
 tests/log*.txt
 *.swp
+**/OUTP/*.OUT
+**/SIMUL/EToData.SIM
+**/SIMUL/RainData.SIM
+**/SIMUL/TempData.SIM
+**/SIMUL/TCrop.SIM
+**/SIMUL/TCropReference.SIM
+**/SIMUL/TnxReference365Days.SIM
+**/SIMUL/*Reference*.Tnx
+**/SIMUL/DEFAULT.CRO
+**/SIMUL/DEFAULT.SOL

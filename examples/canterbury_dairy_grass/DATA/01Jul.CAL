@@ -1,0 +1,9 @@
+Onset: 01 Jul - perennial pasture example (synthetic, Jul-start year)
+         7.2  : AquaCrop Version (August 2024)
+         0    : The onset of the growing period is fixed on a specific date
+        -9    : Day-number (1 ... 366) of the Start of the time window for the onset criterion: Not applicable
+        -9    : Length (days) of the time window for the onset criterion: Not applicable
+       182    : Day-number (1 ... 366) for the onset of the growing period
+        -9    : preset value for generation of the onset: Not applicable
+        -9    : Number of successive days: Not applicable
+        -9    : Number of occurrences: Not applicable

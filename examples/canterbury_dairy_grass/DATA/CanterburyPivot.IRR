@@ -1,0 +1,11 @@
+Canterbury centre pivot irrigation (synthetic): generate on RAW depletion, fixed depth
+     7.2       : AquaCrop Version (August 2024)
+     1         : Irrigation method (1=sprinkler,2=basin,3=border,4=furrow,5=drip)
+   100         : Percentage (%) of soil surface wetted (in season)
+     2         : Irrigation mode (0=rainfed,1=manual,2=generate,3=net irrigation requirement)
+     3         : Generate time criterion (1=fixed interval,2=all depletion,3=all RAW,4=water between bunds)
+     0         : Generate depth criterion (1=to FC,0=fixed depth)
+    -9         : (unused placeholder line; kept for file-structure compatibility)
+FromDay  Target(%RAW)  Depth(mm)  ECw(dS/m)
+==========================================
+     1        80          20        0.0
