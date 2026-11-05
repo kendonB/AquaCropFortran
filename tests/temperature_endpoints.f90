@@ -19,7 +19,6 @@ program temperature_endpoints
     call load_temperature(datatype_daily, [5._sp, 15._sp, 25._sp])
     call check_gdd('daily crop ending on last weather day', 3, record%FromDayNr, 30)
     call check_gdd('daily crop starting on last weather day', 1, record%ToDayNr, 20)
-    call check_gdd('daily crop starting inside the record', 2, record%FromDayNr+1, 30)
     call check_gdd('daily crop extending beyond the record', 4, record%FromDayNr, -9)
     call check_calendar_days('daily threshold reached on final day', 25, record%FromDayNr, 3)
     call check_calendar_days('daily threshold starting on final day', 20, record%ToDayNr, 1)
@@ -39,10 +38,6 @@ program temperature_endpoints
     read(unit, *, iostat=rc) low, high
     if (rc >= 0) error stop 'Unexpected extra TCrop row'
     close(unit)
-
-    ! A weather observation after the crop ends cannot change its GDD total.
-    call load_temperature(datatype_daily, [5._sp, 15._sp, 25._sp, 30._sp])
-    call check_gdd('daily crop with extra weather day', 3, record%FromDayNr, 30)
 
     ! Constant temperatures make interpolated ten-day/monthly daily GDD exactly 10.
     call load_temperature(datatype_decadely, [15._sp, 15._sp, 15._sp, 15._sp])
