@@ -62,3 +62,14 @@ opening a terminal and executing the following commands:
         ...
 
 Where xxx represents any output (.OUT) file.
+
+## Temperature endpoint regression
+
+From the repository root, run `make -C src FC=gfortran test`. This builds
+the executable and checks crop-period temperatures, GDD totals and conversion
+from GDD thresholds to calendar days when the crop
+ends on the final weather date, including single-day periods and positive
+GDD on the final day. It also runs the Ottawa example with the full weather
+record and with observations after 28 October 2016 removed, comparing the
+crop temperatures and checking the truncated run’s cycle and biomass. Tests
+use temporary directories and do not modify the example data.

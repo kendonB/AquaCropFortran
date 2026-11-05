@@ -67,6 +67,13 @@ endif
 bin: $(EXECUTABLE)
 lib: $(LIBRARY)
 all: bin lib
+
+.PHONY: test
+test: bin temperature_endpoints_test
+	sh ../tests/temperature_endpoints.sh
+
+temperature_endpoints_test: ../tests/temperature_endpoints.f90 tempprocessing.o
+	$(FC) $(FCFLAGS) -I. $< kinds.o utils.o project_input.o global.o tempprocessing.o -o $@
 .DEFAULT_GOAL = all
 
 
@@ -201,4 +208,4 @@ $(EXECUTABLE): aquacrop.o
 	$(FC) $(LDFLAGS_EXE) aquacrop.o $(OBJ) -o $(EXECUTABLE)
 
 clean: fortranclean
-	$(RM) $(EXECUTABLE)
+	$(RM) $(EXECUTABLE) temperature_endpoints_test

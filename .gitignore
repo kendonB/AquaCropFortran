@@ -1,6 +1,7 @@
 src/*.o
 src/*.ppu
 src/aquacrop
+src/temperature_endpoints_test
 src/*.mod
 src/*.so
 src/*.a
